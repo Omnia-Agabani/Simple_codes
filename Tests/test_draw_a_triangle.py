@@ -6,9 +6,9 @@ Test module for Draw triangle function.
 Test categories:
     - Standard cases
     - Edge cases
-    - Defensive tests
+    - Defensive cases
 
-Created on 20/10/2025
+Created on 20/01/2025
 Author: Omnia_Agabani
 """
 import unittest
