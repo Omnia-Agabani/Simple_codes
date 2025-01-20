@@ -6,7 +6,7 @@
   The first line has Num stars,
   the second line has Num-1 stars, and so on..
   
-  Created on 20/10/2025
+  Created on 20/01/2025
   Author: Omnia_Agabani
   """
 def draw_a_triangle (Num : int):
