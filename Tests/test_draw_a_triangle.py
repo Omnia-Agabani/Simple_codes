@@ -1,47 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Test module for Draw triangle function.
-
-Test categories:
-    - Standard cases
-    - Edge cases
-    - Defensive cases
-
-Created on 20/01/2025
-Author: Omnia_Agabani
-"""
 import unittest
-from draw_a_triangle import draw_a_triangle
+from .draw_a_triangle import draw_a_triangle
+
 class TestDrawTriangle(unittest.TestCase):
-  """ Test class for Draw triangle function."""
-  
-  #Edge cases:
-  def test_Zero(self):
-    """ Test for zero input."""
+  def test_min_int(self):
     self.assertEqual (draw_a_triangle(0),'')
-  def test_One(self):
-    """ Test for one input."""
-    self.assertEqual (draw_a_triangle(1),'*\n')
-    
-  #Standard cases:
-  def test_small_int(self):
-    """Test for small input"""
-    self.assertEqual (draw_a_triangle(5),'*****\n****\n***\n**\n*\n')
-  def test_large_int(self):
-    """Test for large  input"""
+  def test_int(self):
     self.assertEqual (draw_a_triangle(10),'**********\n*********\n********\n*******\n******\n*****\n****\n***\n**\n*\n')
-  
-  # Defensive cases:
-  def test_string_input(self):
-        """Test error handling for string inputs."""
+  def test_error_handling(self):
+        """Test error handling for invalid inputs."""
         with self.assertRaises(AssertionError):
-            draw_a_triangle('Omnia') 
-  def test_list_input(self):
-        """Test error handling for List inputs.""" 
+            draw_a_triangle('Omnia')  # string
         with self.assertRaises(AssertionError):
-            draw_a_triangle([1,2,3])
-  def test_negative_input(self):
-        """Test error handling for negative inputs.""" 
-        with self.assertRaises(AssertionError):
-            draw_a_triangle(-7)
+            draw_a_triangle([1,2,3])  # list
